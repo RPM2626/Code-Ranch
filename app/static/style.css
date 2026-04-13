@@ -1,1 +1,185 @@
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(to bottom, #F9F7F3, #B5E2FA);
+    color: #333;
+    text-align: center;
+    min-height: 100vh;
+}
 
+.container {
+    width: 380px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #0FA3B1;
+    border-radius: 24px;
+    padding: 28px 20px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    position: relative;
+}
+
+h1, h2, h3 {
+    color: #0FA3B1;
+    margin-bottom: 18px;
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border: 4px solid #0FA3B1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EDDEA4;
+    font-size: 44px;
+    animation: bounce 2s infinite;
+}
+
+.cute-row {
+    font-size: 28px;
+    margin-bottom: 15px;
+    animation: floaty 3s ease-in-out infinite;
+}
+
+.btn {
+    display: block;
+    width: 82%;
+    margin: 12px auto;
+    padding: 13px;
+    border: none;
+    border-radius: 14px;
+    background: #0FA3B1;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    background: #0c8c98;
+    transform: scale(1.04);
+}
+
+.btn-secondary {
+    background: #F7A072;
+}
+
+.btn-secondary:hover {
+    background: #eb8d5d;
+}
+
+input {
+    width: 82%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #B5E2FA;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #0FA3B1;
+    box-shadow: 0 0 8px rgba(15,163,177,0.25);
+}
+
+.table-box {
+    width: 92%;
+    margin: 20px auto;
+    border: 2px solid #0FA3B1;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #B5E2FA;
+    padding: 10px;
+    color: #0b6170;
+}
+
+td {
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.small-btn {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    background: #EDDEA4;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.small-btn:hover {
+    transform: scale(1.05);
+}
+
+.win-box {
+    background: #EDDEA4;
+    padding: 22px;
+    border-radius: 16px;
+    width: 78%;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 20px;
+    animation: popin 0.8s ease;
+}
+
+.note {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.sparkle {
+    font-size: 24px;
+    animation: twinkle 1.3s infinite alternate;
+}
+
+.animal-banner {
+    font-size: 24px;
+    margin-bottom: 12px;
+    letter-spacing: 6px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes floaty {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes twinkle {
+    from { opacity: 0.6; transform: scale(1); }
+    to { opacity: 1; transform: scale(1.12); }
+}
+
+@keyframes popin {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
