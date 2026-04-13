@@ -1,1 +1,42 @@
+{% extends "base.html" %}
 
+{% block content %}
+<div class="container">
+    <div class="animal-banner">🐂 🐄 🐂 🐄</div>
+    <h2>Bulls & Cows</h2>
+    <div class="logo">🐮</div>
+    <div class="cute-row">Guess the secret number! 💖</div>
+
+    <div class="table-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Your Guess</th>
+                    <th>Bulls 🐂</th>
+                    <th>Cows 🐄</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in history %}
+                <tr>
+                    <td>{{ item.guess }}</td>
+                    <td>{{ item.bulls }}</td>
+                    <td>{{ item.cows }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <form method="POST">
+        <input type="text" name="guess" placeholder="Enter 4 digits" maxlength="4" required>
+        <button class="btn" type="submit">New Guess</button>
+    </form>
+
+    <div class="nav-row">
+        <a class="small-btn" href="{{ url_for('game_views.history_page') }}">History</a>
+        <a class="small-btn" href="{{ url_for('game_views.reset_game') }}">Restart</a>
+        <a class="small-btn" href="{{ url_for('game_views.index') }}">Logout</a>
+    </div>
+</div>
+{% endblock %}
