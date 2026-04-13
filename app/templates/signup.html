@@ -2,17 +2,20 @@
 
 {% block content %}
 <div class="container">
-    <h1>Bulls & Cows</h1>
+    <div class="animal-banner">🌸 🐄 ✨ 🐂 ✨ 🐄 🌸</div>
+    <div class="logo">🐮</div>
 
+    <h1>Bulls & Cows</h1>
     <h3>Sign up</h3>
+    <div class="cute-row">Join the farm fun 🌼</div>
 
     <form>
         <input type="text" placeholder="Enter Username">
         <input type="password" placeholder="Enter Password">
-
-        <button class="btn" type="submit">
-            Sign up
-        </button>
+        <button class="btn" type="submit">Sign up</button>
     </form>
+
+    <p class="note">Already have an account?</p>
+    <a class="btn btn-secondary" href="{{ url_for('game_views.login') }}">Back to Login</a>
 </div>
 {% endblock %}
