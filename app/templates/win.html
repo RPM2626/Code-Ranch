@@ -1,1 +1,21 @@
+{% extends "base.html" %}
 
+{% block content %}
+<div class="container">
+    <div class="animal-banner">✨ 🐮 ✨ 🐂 ✨</div>
+    <div class="logo">🏆</div>
+
+    <div class="win-box">
+        Congratulations!<br>
+        You cracked the code!! 🎉
+    </div>
+
+    <div class="cute-row">Happy cows are dancing for you 💃🐄</div>
+
+    <div class="nav-row">
+        <a class="small-btn" href="{{ url_for('game_views.reset_game') }}">Play Again</a>
+        <a class="small-btn" href="{{ url_for('game_views.history_page') }}">History</a>
+        <a class="small-btn" href="{{ url_for('game_views.index') }}">Logout</a>
+    </div>
+</div>
+{% endblock %}
