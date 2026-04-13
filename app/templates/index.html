@@ -1,1 +1,21 @@
+{% extends "base.html" %}
 
+{% block content %}
+<div class="container">
+    <div class="logo">Logo</div>
+
+    <h2>Home Screen</h2>
+
+    <a class="btn" href="{{ url_for('game_views.login') }}">
+        Instructions
+    </a>
+
+    <a class="btn" href="{{ url_for('game_views.game') }}">
+        Play Game
+    </a>
+
+    <a class="btn btn-secondary" href="{{ url_for('game_views.history_page') }}">
+        View History
+    </a>
+</div>
+{% endblock %}
